@@ -1,3 +1,3 @@
 SELECT ProductCode, ProductName, ListPrice, DiscountPercent
-FROM Products
+FROM products
 ORDER BY ListPrice DESC;

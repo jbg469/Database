@@ -1,5 +1,5 @@
-SELECT first_name,last_name, line1,city,state,zip_code
+SELECT first_name, last_name, addy.line1, addy.city, addy.state, addy.zip_code
 FROM customers
-INNER JOIN addresses ON customer_id = customer_id
+INNER JOIN addresses AS addy ON customer_id = addy.customer_id
 WHERE email_address = 'allan.sherwood@yahoo.com'
-ORDER BY zip_code ASC
+ORDER BY addy.zip_code ASC

@@ -1,5 +1,5 @@
 SELECT email_address, COUNT(o.order_id) AS order_count,
-SUM((item_price - discount_amount) * quantity) AS order_total
+SUM((o.item_price - o.discount_amount) * o.quantity) AS order_total
 FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id
 JOIN order_items oi ON o.order_id = oi.order_id

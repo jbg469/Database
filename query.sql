@@ -1,5 +1,4 @@
-SELECT category_name, COUNT(product_id), MAX(list_price)
-FROM categories 
-JOIN products ON categories.category_id=products.category_id
-GROUP BY category_name
-ORDERY BY COUNT(product_ID) DESC;
+SELECT c.category_name, COUNT(p.category_id) AS product_count, MAX(p.ListPrice) AS most_expensive_product
+FROM categories c, products p
+WHERE p.category_id=c.category_id
+GROUP BY c.category_name ORDER BY COUNT(*) DESC

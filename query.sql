@@ -1,8 +1,13 @@
-SELECT email_address, COUNT(o.order_id) AS order_count,
-SUM((o.item_price - o.discount_amount) * o.quantity) AS order_total
-FROM customers c
-JOIN orders o ON c.customer_id = o.customer_id
-JOIN order_items oi ON o.order_id = oi.order_id
+SELECT email_address,
+COUNT (orders.order_id) AS order_amount,
+(SUM(item_price)-SUM(discount_amount)*SUM(quantity)) AS order_total
+FROM customers
+JOIN orders
+ON 
+customers.customer_id=orders.customer_id
+JOIN order_items
+ON
+orders.order_id= order_iterms.order_id
 GROUP BY email_address
-HAVING COUNT(o.order_id) > 1
-ORDER BY order_total DESC
+HAVING COUUT(orders.order_id) >1
+ORDER BY SUM(item_price) DESC

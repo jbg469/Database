@@ -3,7 +3,7 @@ FROM customers c
     JOIN orders o
         ON c.customer_id = o.customer_id
     JOIN order_items oi
-        ON oi.customer_id = o.customer_id
+        ON oi.order_id = o.order_id
 GROUP BY c.customer_id
 HAVING COUNT(o.order_id) > 1
 ORDER BY order_count DESC

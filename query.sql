@@ -5,5 +5,5 @@ FROM order_items oi
     JOIN customers c
         ON o.customer_id = c.customer_id
 GROUP BY c.customer_id
-HAVING order_count >1
+HAVING order_count >2
 ORDER BY order_total DESC;

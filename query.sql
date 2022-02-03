@@ -5,5 +5,5 @@ FROM customers c
     JOIN order_items oi
         ON oi.order_id = o.order_id
 GROUP BY email_address
-HAVING COUNT(o.order_id) > 1
+HAVING COUNT(DISTINCT o.order_id) > 1
 ORDER BY order_count DESC

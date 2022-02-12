@@ -1,2 +1,1 @@
-CREATE INDEX firstname ON customers (firstname)
-CREATE INDEX lastname ON customers (lastname);
+CREATE INDEX name ON customers (first_name,last_name)

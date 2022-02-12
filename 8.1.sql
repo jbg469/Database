@@ -5,3 +5,4 @@ SELECT
     CAST(list_price AS UNSIGNED) AS price_cast   
 FROM products
 ORDER BY list_price ASC
+ 

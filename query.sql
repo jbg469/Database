@@ -1,6 +1,3 @@
 ALTER TABLE products
-ADD COLUMN
-(
-product_price DECIMAL(5,2) DEFAULT 9.99,
-date_addedtodb DATETIME not null
-)
+ADD   column product_price decimal(5,2) DEFAULT 9.99,
+ADD column payment_date_and_time DATETIME;

@@ -1,6 +1,6 @@
 CREATE PROCEDURE test()
 BEGIN
-  DECLARE i              INT DEFAULT 1;
+  DECLARE b              INT DEFAULT 1;
   DECLARE number_1_var   INT DEFAULT 10;
   DECLARE number_2_var   INT DEFAULT 20;
   DECLARE message_var    VARCHAR(400);

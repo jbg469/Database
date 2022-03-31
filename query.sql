@@ -1,7 +1,7 @@
 CREATE PROCEDURE test(
 OUT message VARCHAR(60))
 BEGIN
-DECLARE productCount DECIMAL DEFAULT 0;
+DECLARE productCount DECIMAL DEFAULT 1;
 SELECT COUNT(*)
 INTO productCount
 FROM products;
